@@ -50,8 +50,6 @@ namespace NET.API.Homework
 
                         var photos = JsonConvert.DeserializeObject<List<Models.Photo>>(contentStringPhoto);
 
-
-
                         foreach (var albumId in albumIds)
                         {
 
@@ -65,9 +63,7 @@ namespace NET.API.Homework
                             }
                         }
                     }
-
                 }
-
             }
         }
     }
