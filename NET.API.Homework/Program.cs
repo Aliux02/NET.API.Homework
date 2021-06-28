@@ -50,18 +50,25 @@ namespace NET.API.Homework
 
                         var photos = JsonConvert.DeserializeObject<List<Models.Photo>>(contentStringPhoto);
 
-                        foreach (var albumId in albumIds)
-                        {
+                        var filteredPhotos = photos.Where(p => albumIds.Contains(p.AlbumId)).Select(a => a.Url);
 
-                            foreach (var photo in photos)
-                            {
-                                
-                                if (photo.AlbumId == albumId)
-                                {
-                                    Console.WriteLine(photo.Id);
-                                }
-                            }
+                        foreach (var photoUrl in filteredPhotos)
+                        {
+                            Console.WriteLine(photoUrl);
                         }
+
+                        //foreach (var albumId in albumIds)
+                        //{
+
+                        //    foreach (var photo in photos)
+                        //    {
+                                
+                        //        if (photo.AlbumId == albumId)
+                        //        {
+                        //            Console.WriteLine(photo.Id);
+                        //        }
+                        //    }
+                        //}
                     }
                 }
             }
