@@ -64,16 +64,11 @@ namespace NET.API.Homework
                                 }
                             }
                         }
-
-
                     }
 
                 }
 
             }
-
-
-
         }
     }
 }
